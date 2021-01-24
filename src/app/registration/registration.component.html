@@ -1,0 +1,23 @@
+<div class="registration">
+    <h2>Online Registration Platform</h2>
+    <span>Please enter your details to register</span>
+    <div class="registration-form">
+        <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+            <div class="ui left corner labeled input field">
+                <label for="firstName">First Name</label>
+                <input type="text" name="firstName" id="firstName" formControlName="firstName">
+                <div class="ui left cornet label">
+                    <i class="asterisk icon"></i>
+                </div>
+            </div>
+            <div class="ui left corner labeled input field">
+                <label for="lastName">Last Name</label>
+                <input type="text" name="lastName" id="lastName" formControlName="lastName">
+                <div class="ui left cornet label">
+                    <i class="asterisk icon"></i>
+                </div>
+            </div>
+            <button class="ui inverted orange button" type="submit" [disabled]="!registrationForm.valid">Register</button>
+        </form>
+    </div>
+</div>
